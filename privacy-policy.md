@@ -2,7 +2,7 @@
 
 Last updated: December 19, 2025  
 App name: Savelon: Encrypted Contacts  
-Contact: https://tally.so/r/jaZKA6
+Contact: [https://tally.so/r/jaZKA6](https://tally.so/r/jaZKA6)
 
 This Privacy Policy explains how Savelon: Encrypted Contacts (“the App”) handles information when you use it.
 
@@ -34,7 +34,7 @@ This information is used only to respond to your request and provide customer su
 
 ## 4) How support data is collected and stored (Tally)
 
-Support requests submitted through the App are collected using Tally (https://tally.so). When you submit the support form, the data you enter is sent to and stored by Tally, and then accessed by us for support purposes.
+Support requests submitted through the App are collected using Tally ([https://tally.so](https://tally.so)). When you submit the support form, the data you enter is sent to and stored by Tally, and then accessed by us for support purposes.
 
 Tally acts as a service provider (processor) for handling these submissions. Their processing of your data is governed by their terms and privacy practices.
 
@@ -83,7 +83,7 @@ Because we generally do not collect data during normal App use, these rights mai
 
 ## 11) Contact
 
-If you have questions or requests about this Privacy Policy or your support submission data, contact: https://tally.so/r/jaZKA6
+If you have questions or requests about this Privacy Policy or your support submission data, contact: [https://tally.so/r/jaZKA6](https://tally.so/r/jaZKA6)
 
 ## 12) Changes to this Privacy Policy
 
