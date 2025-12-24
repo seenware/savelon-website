@@ -1,10 +1,10 @@
-## Privacy Policy for Savelon: Encrypted Contacts
+## Privacy Policy for Savelon: Private Contacts
 
-Last updated: December 19, 2025  
-App name: Savelon: Encrypted Contacts  
+Last updated: December 24, 2025  
+App name: Savelon: Private Contacts  
 Contact: [https://tally.so/r/jaZKA6](https://tally.so/r/jaZKA6)
 
-This Privacy Policy explains how Savelon: Encrypted Contacts (“the App”) handles information when you use it.
+This Privacy Policy explains how Savelon: Private Contacts (“the App”) handles information when you use it.
 
 ## 1) Summary
 
