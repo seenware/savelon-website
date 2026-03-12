@@ -59,6 +59,10 @@ export function LandingPage() {
 	const location = useLocation();
 
 	useEffect(() => {
+		document.title = 'Savelon: private contacts';
+	}, []);
+
+	useEffect(() => {
 		if (!location.hash) return;
 		const id = location.hash.replace('#', '');
 		// Defer until after initial render so sections exist
