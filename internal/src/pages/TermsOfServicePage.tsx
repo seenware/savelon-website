@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Footer } from '../shared/Footer'
 import { NavBar } from '../shared/NavBar'
@@ -5,6 +6,10 @@ import { Section } from '../shared/Section'
 
 export function TermsOfServicePage() {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    document.title = 'Savelon - Terms of Service'
+  }, [])
 
   return (
     <div className="page-root">
