@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { Footer } from '../shared/Footer'
 import { NavBar } from '../shared/NavBar'
 import { Section } from '../shared/Section'
 
@@ -284,6 +285,7 @@ export function PrivacyPolicyPage() {
           </article>
         </Section>
       </main>
+      <Footer />
     </div>
   )
 }
