@@ -222,6 +222,19 @@
 	color: #4b5563;
 }
 
+.encryption-pill {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid #9ece9a;
+	color: #5d9f62;
+	background: transparent;
+	border-radius: 999px;
+	padding: 0.32rem 0.75rem;
+	font-size: 0.78rem;
+	line-height: 1;
+	margin-top: 0.9rem;
+}
+
 .hero-ctas {
 	display: flex;
 	flex-wrap: wrap;
@@ -240,6 +253,114 @@
 	margin-top: 1.25rem;
 	font-size: 0.9rem;
 	color: #6b7280;
+}
+
+.download-tabs-card {
+	margin-top: 1.5rem;
+	max-width: 540px;
+}
+
+.download-tabs {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0;
+}
+
+.download-tab {
+	border: 1px solid #d4d8dd;
+	background: #f9fafb;
+	color: #4b5563;
+	font-size: 0.9rem;
+	padding: 0.68rem 0.8rem;
+	cursor: pointer;
+}
+
+.download-tab:first-child {
+	border-top-left-radius: 1rem;
+}
+
+.download-tab:last-child {
+	border-top-right-radius: 1rem;
+	border-left: none;
+}
+
+.download-tab.is-active {
+	background: #ffffff;
+	color: #0f172a;
+}
+
+.download-card-body {
+	border: 1px solid #d4d8dd;
+	border-top: none;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	padding: 1rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	background: #ffffff;
+}
+
+.download-qr-wrap {
+	flex: 0 0 156px;
+	width: 156px;
+	height: 156px;
+	border-radius: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.download-qr-image {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.download-qr-image svg,
+.download-qr-image canvas {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.download-copy h3 {
+	margin: 0;
+	font-size: 1.45rem;
+}
+
+.download-copy p {
+	margin: 0.45rem 0 0;
+	font-size: 0.9rem;
+}
+
+.download-copy {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.download-copy a {
+	color: #4f78b6;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.download-copy a:hover {
+	color: #41679e;
+}
+
+@media (max-width: 560px) {
+	.download-card-body {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .hero-visual {

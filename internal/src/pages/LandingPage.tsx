@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import QRCodeStyling from 'qr-code-styling';
 import { useLocation } from 'react-router-dom';
-import heroImage from '../assets/hero.png';
+import heroImage from '../assets/hero-screenshot.png';
 import '../LandingLayout.css';
 import {
 	PrimaryButton,
@@ -12,9 +13,30 @@ import { Footer } from '../shared/Footer';
 import { NavBar } from '../shared/NavBar';
 import { Section } from '../shared/Section';
 
-const APP_STORE_URL =
-	'https://apps.apple.com/de/app/savelon-private-contacts/id6755902938?l=en-GB';
+const APP_STORE_URL = 'https://apps.apple.com/app/id6755902938';
+const GOOGLE_PLAY_URL =
+	'https://play.google.com/store/apps/details?id=com.seenware.encryptedcontacts';
 const SUPPORT_URL = 'https://tally.so/r/jaZKA6';
+
+type DownloadTab = 'ios' | 'android';
+
+function detectInitialTab(): DownloadTab {
+	if (typeof navigator === 'undefined') return 'ios';
+
+	const userAgent = navigator.userAgent.toLowerCase();
+	const platform = (navigator.platform || '').toLowerCase();
+	const isAndroid = userAgent.includes('android');
+	const isIos = /iphone|ipad|ipod/.test(userAgent);
+	const isMac = platform.includes('mac') || userAgent.includes('mac os');
+	const isSupportedDesktop =
+		platform.includes('win') ||
+		platform.includes('linux') ||
+		userAgent.includes('cros');
+
+	if (isAndroid || isSupportedDesktop) return 'android';
+	if (isIos || isMac) return 'ios';
+	return 'ios';
+}
 
 const faqItems = [
 	{
@@ -50,6 +72,11 @@ const faqItems = [
 ];
 
 export function LandingPage() {
+	const [activeDownloadTab, setActiveDownloadTab] =
+		useState<DownloadTab>(detectInitialTab);
+	const qrContainerRef = useRef<HTMLDivElement | null>(null);
+	const qrInstanceRef = useRef<QRCodeStyling | null>(null);
+
 	const scrollToId = (id: string) => {
 		const el = document.getElementById(id);
 		if (!el) return;
@@ -71,6 +98,53 @@ export function LandingPage() {
 		}, 0);
 	}, [location.hash]);
 
+	const activeStoreUrl =
+		activeDownloadTab === 'ios' ? APP_STORE_URL : GOOGLE_PLAY_URL;
+	const activeStoreText =
+		activeDownloadTab === 'ios' ? 'App Store' : 'Google Play';
+	const qrSize = 156;
+
+	useEffect(() => {
+		if (!qrContainerRef.current) return;
+
+		if (!qrInstanceRef.current) {
+			qrInstanceRef.current = new QRCodeStyling({
+				width: qrSize,
+				height: qrSize,
+				data: activeStoreUrl,
+				margin: 0,
+				type: 'svg',
+				qrOptions: {
+					errorCorrectionLevel: 'H',
+				},
+				dotsOptions: {
+					type: 'dots',
+					color: '#0f172a',
+				},
+				cornersSquareOptions: {
+					type: 'extra-rounded',
+					color: '#0f172a',
+				},
+				cornersDotOptions: {
+					type: 'dot',
+					color: '#0f172a',
+				},
+				backgroundOptions: {
+					color: '#ffffff',
+				},
+			});
+
+			qrContainerRef.current.innerHTML = '';
+			qrInstanceRef.current.append(qrContainerRef.current);
+		}
+
+		qrInstanceRef.current.update({
+			data: activeStoreUrl,
+			width: qrSize,
+			height: qrSize,
+		});
+	}, [activeStoreUrl, qrSize]);
+
 	return (
 		<div className='page-root'>
 			<NavBar
@@ -84,7 +158,7 @@ export function LandingPage() {
 						return;
 					}
 					if (target === 'download') {
-						scrollToId('final-cta');
+						scrollToId('hero');
 						return;
 					}
 					if (target === 'why') {
@@ -104,30 +178,56 @@ export function LandingPage() {
 				<Section id='hero' className='hero-section'>
 					<div className='hero-inner'>
 						<div className='hero-copy'>
-							<p className='eyebrow'>Savelon</p>
-							<h1>Private contacts, under your control</h1>
+							<h1>Your second phonebook, fully private</h1>
 							<p className='hero-subheadline'>
-								Savelon is a private contacts app for people who want important
-								contacts stored outside default platform systems.
+								Open source, offline contacts, hidden from other apps
 							</p>
-							<div className='hero-ctas'>
-								<PrimaryButton
-									as='a'
-									href={APP_STORE_URL}
-									target='_blank'
-									rel='noreferrer'
-									aria-label='Download Savelon on the App Store'
-									className='app-store-button'
+							<div className='encryption-pill'>256bit encryption</div>
+							<div className='download-tabs-card'>
+								<div
+									className='download-tabs'
+									role='tablist'
+									aria-label='Download platform tabs'
 								>
-									Download on the App Store
-								</PrimaryButton>
-								<SecondaryButton onClick={() => scrollToId('why-it-matters')}>
-									Why private contacts matter
-								</SecondaryButton>
+									<button
+										type='button'
+										role='tab'
+										aria-selected={activeDownloadTab === 'ios'}
+										className={`download-tab ${activeDownloadTab === 'ios' ? 'is-active' : ''}`}
+										onClick={() => setActiveDownloadTab('ios')}
+									>
+										iOS, MacOS
+									</button>
+									<button
+										type='button'
+										role='tab'
+										aria-selected={activeDownloadTab === 'android'}
+										className={`download-tab ${activeDownloadTab === 'android' ? 'is-active' : ''}`}
+										onClick={() => setActiveDownloadTab('android')}
+									>
+										Android
+									</button>
+								</div>
+								<div className='download-card-body'>
+									<div className='download-qr-wrap'>
+										<div
+											ref={qrContainerRef}
+											className='download-qr-image'
+											role='img'
+											aria-label={`QR code to download from ${activeStoreText}`}
+										/>
+									</div>
+									<div className='download-copy'>
+										<h3>Scan to download</h3>
+										<p>
+											Or go to the{' '}
+											<a href={activeStoreUrl} target='_blank' rel='noreferrer'>
+												{activeStoreText}
+											</a>
+										</p>
+									</div>
+								</div>
 							</div>
-							<p className='availability'>
-								Available on iPhone, iPad, and macOS. Android coming soon.
-							</p>
 						</div>
 						<div className='hero-visual' aria-hidden='true'>
 							<img
@@ -285,14 +385,8 @@ export function LandingPage() {
 						<h2>Take control of your private contacts</h2>
 						<p>Store the people that matter in a more private, secure place.</p>
 						<div className='hero-ctas'>
-							<PrimaryButton
-								as='a'
-								href={APP_STORE_URL}
-								target='_blank'
-								rel='noreferrer'
-								className='app-store-button'
-							>
-								Download on the App Store
+							<PrimaryButton onClick={() => scrollToId('hero')}>
+								Download
 							</PrimaryButton>
 							<SecondaryButton
 								as='a'
