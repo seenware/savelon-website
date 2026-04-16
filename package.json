@@ -1,0 +1,12 @@
+{
+  "name": "savelon-website",
+  "private": true,
+  "scripts": {
+    "ci": "npm run lint && npm run build && npm run verify:docs-generated",
+    "dev": "npm --prefix site run dev",
+    "build": "npm --prefix site run build",
+    "lint": "npm --prefix site run lint",
+    "preview": "npm --prefix site run preview",
+    "verify:docs-generated": "git diff --exit-code -- docs"
+  }
+}
