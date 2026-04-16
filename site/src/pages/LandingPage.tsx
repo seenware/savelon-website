@@ -187,12 +187,20 @@ export function LandingPage() {
 								</div>
 								<div className='download-card-body'>
 									<div className='download-qr-wrap'>
-										<div
-											ref={qrContainerRef}
-											className='download-qr-image'
-											role='img'
-											aria-label={`QR code to download from ${activeStoreText}`}
-										/>
+										<a
+											className='download-qr-link'
+											href={activeStoreUrl}
+											target='_blank'
+											rel='noreferrer'
+											aria-label={`Open ${activeStoreText} download link`}
+										>
+											<div
+												ref={qrContainerRef}
+												className='download-qr-image'
+												role='img'
+												aria-label={`QR code to download from ${activeStoreText}`}
+											/>
+										</a>
 									</div>
 									<div className='download-copy'>
 										<h3>Scan to download</h3>
