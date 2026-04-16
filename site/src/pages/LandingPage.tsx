@@ -140,7 +140,12 @@ export function LandingPage() {
 		<div className='page-root'>
 			<div className='site-brand'>
 				<div className='site-brand-inner'>
-					<img src={appLogo} alt='' className='site-brand-logo' aria-hidden='true' />
+					<img
+						src={appLogo}
+						alt=''
+						className='site-brand-logo'
+						aria-hidden='true'
+					/>
 					<h1>Savelon: Private Contacts</h1>
 				</div>
 			</div>
@@ -249,6 +254,8 @@ export function LandingPage() {
 									<a
 										className='inline-link'
 										href='/privacy'
+										target='_blank'
+										rel='noreferrer'
 									>
 										Privacy Policy
 									</a>
@@ -259,8 +266,9 @@ export function LandingPage() {
 					</div>
 				</Section>
 				<Section id='privacy-simple'>
-					<div className='text-block'>
+					<div className='text-block privacy-simple-content'>
 						<h2>Privacy, made simple</h2>
+						<p>No more complicated setups. Just one app.</p>
 						<div className='pill-stack' aria-hidden='true'>
 							<div className='pill'>Contact photos</div>
 							<div className='pill'>Easy import &amp; export</div>
@@ -277,55 +285,31 @@ export function LandingPage() {
 					<div className='benefits-grid'>
 						<article className='benefit-card'>
 							<div className='benefit-head'>
-								<div className='benefit-icon' aria-hidden='true'>
-									<svg viewBox='0 0 24 24' focusable='false'>
-										<rect x='4' y='7' width='10' height='10' rx='2' />
-										<rect x='10' y='5' width='10' height='10' rx='2' />
-									</svg>
-								</div>
-								<h3>Keep private contacts separate</h3>
+								<h3>👀 Take back control from Big Tech</h3>
 							</div>
 							<p>
-								Store important contacts away from your default contacts app.
+								Your contacts shouldn’t end up in surveillance systems you don’t
+								really control. Savelon keeps them on your device, not in the
+								cloud.
 							</p>
 						</article>
 						<article className='benefit-card'>
 							<div className='benefit-head'>
-								<div className='benefit-icon' aria-hidden='true'>
-									<svg viewBox='0 0 24 24' focusable='false'>
-										<path d='M12 3l7 3v5c0 5-3.2 8.7-7 10-3.8-1.3-7-5-7-10V6l7-3z' />
-									</svg>
-								</div>
-								<h3>Protect who you know</h3>
-							</div>
-							<p>Keep your personal network in a more private space.</p>
-						</article>
-						<article className='benefit-card'>
-							<div className='benefit-head'>
-								<div className='benefit-icon' aria-hidden='true'>
-									<svg viewBox='0 0 24 24' focusable='false'>
-										<path d='M4 7h10M4 12h16M4 17h12' />
-										<circle cx='16' cy='7' r='2' />
-										<circle cx='12' cy='17' r='2' />
-									</svg>
-								</div>
-								<h3>Stay in control of your data</h3>
-							</div>
-							<p>Your sensitive contact data should belong to you.</p>
-						</article>
-						<article className='benefit-card'>
-							<div className='benefit-head'>
-								<div className='benefit-icon' aria-hidden='true'>
-									<svg viewBox='0 0 24 24' focusable='false'>
-										<rect x='5' y='11' width='14' height='10' rx='2' />
-										<path d='M8 11V8a4 4 0 018 0v3' />
-									</svg>
-								</div>
-								<h3>Encrypted on your device</h3>
+								<h3>🤐 Protect what’s truly confidential</h3>
 							</div>
 							<p>
-								Savelon is designed to protect your contacts with on-device
-								encryption.
+								Some contacts are sensitive by nature. Savelon encrypts them on
+								your device and lets you lock them with a password.
+							</p>
+						</article>
+						<article className='benefit-card'>
+							<div className='benefit-head'>
+								<h3>🤙 Have a second private phonebook</h3>
+							</div>
+							<p>
+								Not every contact belongs in your main list. Savelon gives you a
+								separate space for important or rarely used contacts, kept out
+								of sync and away from other apps.
 							</p>
 						</article>
 					</div>

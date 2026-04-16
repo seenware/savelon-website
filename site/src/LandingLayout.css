@@ -54,6 +54,10 @@
 	max-width: 640px;
 }
 
+.privacy-simple-content {
+	max-width: none;
+}
+
 .section h2 {
 	font-size: 1.75rem;
 	line-height: 1.2;
@@ -361,6 +365,7 @@
 	background: #e5e7eb;
 	color: #4b5563;
 	font-size: 0.8rem;
+	white-space: nowrap;
 }
 
 .feature-list {
@@ -400,9 +405,11 @@
 
 .pill-stack {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: flex-start;
 	gap: 0.6rem;
+	margin-top: 1rem;
 }
 
 @media (min-width: 768px) {

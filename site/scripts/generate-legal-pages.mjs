@@ -1,7 +1,7 @@
 /**
  * Post-build script: generates static legal pages for GitHub Pages.
  * - Generates canonical pretty URLs: /privacy and /terms.
- * - Keeps compatibility redirects from /privacy.html and /terms.html.
+ * - Generates compatibility files /privacy.html and /terms.html.
  * - Copies favicon manifest files to docs for stable metadata assets.
  *
  * Run after `vite build`. Reads built docs/index.html for asset paths,
@@ -109,8 +109,8 @@ function layout(title, description, canonicalPath, assetPaths, bodyContent) {
             <div>
               <div class="footer-links">
                 <a href="https://apps.apple.com/de/app/savelon-private-contacts/id6755902938?l=en-GB" target="_blank" rel="noreferrer">Download on the App Store</a>
-                <a href="/privacy" rel="noreferrer">Privacy Policy</a>
-                <a href="/terms" rel="noreferrer">Terms of Service</a>
+                <a href="/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>
+                <a href="/terms" target="_blank" rel="noreferrer">Terms of Service</a>
                 <a href="https://tally.so/r/jaZKA6" target="_blank" rel="noreferrer">Contact Us</a>
               </div>
               <div style="margin-top: 0.5rem;">© Savelon. All rights reserved.</div>
@@ -559,10 +559,22 @@ writeFile(
 );
 writeFile(
 	'privacy.html',
-	'<!doctype html><html><head><meta charset="utf-8"><link rel="canonical" href="https://savelon.com/privacy"><meta http-equiv="refresh" content="0; url=/privacy"></head><body></body></html>',
+	layout(
+		'Savelon: Privacy Policy',
+		'Privacy Policy for Savelon: Private Contacts.',
+		'/privacy',
+		assetPaths,
+		privacyArticle,
+	),
 );
 writeFile(
 	'terms.html',
-	'<!doctype html><html><head><meta charset="utf-8"><link rel="canonical" href="https://savelon.com/terms"><meta http-equiv="refresh" content="0; url=/terms"></head><body></body></html>',
+	layout(
+		'Savelon: Terms of Service',
+		'Terms of Service for Savelon: Private Contacts.',
+		'/terms',
+		assetPaths,
+		termsArticle,
+	),
 );
 console.log('Generated legal pages and favicon assets in docs/');

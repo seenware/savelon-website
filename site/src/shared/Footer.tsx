@@ -10,10 +10,10 @@ export function Footer() {
             <a href={GITHUB_URL} target="_blank" rel="noreferrer">
               GitHub
             </a>
-            <a href="/privacy">
+            <a href="/privacy" target="_blank" rel="noreferrer">
               Privacy Policy
             </a>
-            <a href="/terms">
+            <a href="/terms" target="_blank" rel="noreferrer">
               Terms of Service
             </a>
             <a href={SUPPORT_URL} target="_blank" rel="noreferrer">
