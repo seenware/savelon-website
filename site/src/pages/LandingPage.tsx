@@ -1,6 +1,7 @@
 import QRCodeStyling from 'qr-code-styling';
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import downloadCurlyArrow from '../assets/download-curly-arrow.png';
 import heroImage from '../assets/hero-screenshot.png';
 import appLogo from '../assets/logo.png';
 import '../LandingLayout.css';
@@ -65,7 +66,9 @@ const faqItems = [
 export function LandingPage() {
 	const [activeDownloadTab, setActiveDownloadTab] =
 		useState<DownloadTab>(detectInitialTab);
+	const [isMobileDownloadLayout, setIsMobileDownloadLayout] = useState(false);
 	const qrContainerRef = useRef<HTMLDivElement | null>(null);
+	const mobileQrContainerRef = useRef<HTMLDivElement | null>(null);
 	const qrInstanceRef = useRef<QRCodeStyling | null>(null);
 
 	const scrollToId = (id: string) => {
@@ -89,6 +92,21 @@ export function LandingPage() {
 		}, 0);
 	}, [location.hash]);
 
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+		const mediaQuery = window.matchMedia('(max-width: 560px)');
+
+		const syncMobileDownloadLayout = () => {
+			setIsMobileDownloadLayout(mediaQuery.matches);
+		};
+
+		syncMobileDownloadLayout();
+		mediaQuery.addEventListener('change', syncMobileDownloadLayout);
+		return () => {
+			mediaQuery.removeEventListener('change', syncMobileDownloadLayout);
+		};
+	}, []);
+
 	const activeStoreUrl =
 		activeDownloadTab === 'ios' ? APP_STORE_URL : GOOGLE_PLAY_URL;
 	const activeStoreText =
@@ -96,7 +114,10 @@ export function LandingPage() {
 	const qrSize = 156;
 
 	useEffect(() => {
-		if (!qrContainerRef.current) return;
+		const activeQrContainer = isMobileDownloadLayout
+			? mobileQrContainerRef.current
+			: qrContainerRef.current;
+		if (!activeQrContainer) return;
 
 		if (!qrInstanceRef.current) {
 			qrInstanceRef.current = new QRCodeStyling({
@@ -124,95 +145,118 @@ export function LandingPage() {
 					color: '#ffffff',
 				},
 			});
-
-			qrContainerRef.current.innerHTML = '';
-			qrInstanceRef.current.append(qrContainerRef.current);
 		}
 
+		activeQrContainer.innerHTML = '';
+		qrInstanceRef.current.append(activeQrContainer);
 		qrInstanceRef.current.update({
 			data: activeStoreUrl,
 			width: qrSize,
 			height: qrSize,
 		});
-	}, [activeStoreUrl, qrSize]);
+	}, [activeStoreUrl, qrSize, isMobileDownloadLayout]);
 
 	return (
 		<div className='page-root'>
-			<div className='site-brand'>
-				<div className='site-brand-inner'>
-					<img
-						src={appLogo}
-						alt=''
-						className='site-brand-logo'
-						aria-hidden='true'
-					/>
-					<h1>Savelon: Private Contacts</h1>
-				</div>
-			</div>
 			<main>
 				<Section id='hero' className='hero-section'>
 					<div className='hero-inner'>
 						<div className='hero-copy'>
-							<h2 className='hero-title'>
-								Your second phonebook, fully private
-							</h2>
-							<p className='hero-subheadline'>
-								Open source, privacy-first contacts app
-							</p>
-							<div className='encryption-pill'>256bit encryption</div>
-							<div className='download-tabs-card'>
-								<div
-									className='download-tabs'
-									role='tablist'
-									aria-label='Download platform tabs'
-								>
-									<button
-										type='button'
-										role='tab'
-										aria-selected={activeDownloadTab === 'ios'}
-										className={`download-tab ${activeDownloadTab === 'ios' ? 'is-active' : ''}`}
-										onClick={() => setActiveDownloadTab('ios')}
-									>
-										iOS, MacOS
-									</button>
-									<button
-										type='button'
-										role='tab'
-										aria-selected={activeDownloadTab === 'android'}
-										className={`download-tab ${activeDownloadTab === 'android' ? 'is-active' : ''}`}
-										onClick={() => setActiveDownloadTab('android')}
-									>
-										Android
-									</button>
-								</div>
-								<div className='download-card-body'>
-									<div className='download-qr-wrap'>
-										<a
-											className='download-qr-link'
-											href={activeStoreUrl}
-											target='_blank'
-											rel='noreferrer'
-											aria-label={`Open ${activeStoreText} download link`}
-										>
-											<div
-												ref={qrContainerRef}
-												className='download-qr-image'
-												role='img'
-												aria-label={`QR code to download from ${activeStoreText}`}
-											/>
-										</a>
-									</div>
-									<div className='download-copy'>
-										<h3>Scan to download</h3>
-										<p>
-											Or go to the{' '}
-											<a href={activeStoreUrl} target='_blank' rel='noreferrer'>
-												{activeStoreText}
-											</a>
-										</p>
-									</div>
-								</div>
+							<div className='hero-badges' aria-label='Key privacy features'>
+								<div className='hero-badge-pill'>OPEN SOURCE</div>
+								<div className='hero-badge-pill'>256 BIT ENCRYPTION</div>
+								<div className='hero-badge-pill'>NO CLOUDS</div>
 							</div>
+							<div className='hero-brand-inline'>
+								<img
+									src={appLogo}
+									alt=''
+									className='site-brand-logo'
+									aria-hidden='true'
+								/>
+								<h1 className='hero-brand-title'>Savelon: Private Contacts</h1>
+							</div>
+							<h2 className='hero-title'>
+								Privacy-first contacts app
+							</h2>
+							{isMobileDownloadLayout ? (
+								<div className='mobile-download-block'>
+									<a
+										className='mobile-download-qr-link'
+										href={activeStoreUrl}
+										target='_blank'
+										rel='noreferrer'
+										aria-label={`Open ${activeStoreText} download link`}
+									>
+										<div
+											ref={mobileQrContainerRef}
+											className='mobile-download-qr-image'
+											role='img'
+											aria-label={`QR code to download from ${activeStoreText}`}
+										/>
+									</a>
+									<h3 className='download-cta-copy mobile-download-copy'>
+										Tap or scan to download
+									</h3>
+								</div>
+							) : (
+								<div className='download-tabs-card'>
+									<div
+										className='download-tabs'
+										role='tablist'
+										aria-label='Download platform tabs'
+									>
+										<button
+											type='button'
+											role='tab'
+											aria-selected={activeDownloadTab === 'ios'}
+											className={`download-tab ${activeDownloadTab === 'ios' ? 'is-active' : ''}`}
+											onClick={() => setActiveDownloadTab('ios')}
+										>
+											iOS, MacOS
+										</button>
+										<button
+											type='button'
+											role='tab'
+											aria-selected={activeDownloadTab === 'android'}
+											className={`download-tab ${activeDownloadTab === 'android' ? 'is-active' : ''}`}
+											onClick={() => setActiveDownloadTab('android')}
+										>
+											Android
+										</button>
+									</div>
+									<div className='download-card-body'>
+										<div className='download-qr-wrap'>
+											<a
+												className='download-qr-link'
+												href={activeStoreUrl}
+												target='_blank'
+												rel='noreferrer'
+												aria-label={`Open ${activeStoreText} download link`}
+											>
+												<div
+													ref={qrContainerRef}
+													className='download-qr-image'
+													role='img'
+													aria-label={`QR code to download from ${activeStoreText}`}
+												/>
+											</a>
+										</div>
+										<div className='download-middle-arrow' aria-hidden='true'>
+											<img
+												src={downloadCurlyArrow}
+												alt=''
+												className='download-middle-arrow-icon'
+											/>
+										</div>
+										<div className='download-copy'>
+											<h3 className='download-cta-copy'>
+												Tap or scan to download
+											</h3>
+										</div>
+									</div>
+								</div>
+							)}
 						</div>
 						<div className='hero-visual' aria-hidden='true'>
 							<img

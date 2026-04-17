@@ -6,29 +6,10 @@
 	color: #0f172a;
 }
 
-.site-brand {
-	padding: 1.1rem 1.5rem 0;
-}
-
-.site-brand-inner {
-	max-width: 960px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	gap: 0.75rem;
-}
-
 .site-brand-logo {
 	width: 44px;
 	height: 44px;
 	flex-shrink: 0;
-}
-
-.site-brand h1 {
-	margin: 0;
-	font-size: 1.18rem;
-	font-weight: 600;
-	letter-spacing: -0.01em;
 }
 
 .section {
@@ -36,10 +17,6 @@
 }
 
 @media (min-width: 768px) {
-	.site-brand {
-		padding: 1.2rem 2rem 0;
-	}
-
 	.section {
 		padding: 4.5rem 2rem;
 	}
@@ -157,10 +134,12 @@
 }
 
 .hero-title {
-	font-size: 2.15rem;
-	line-height: 1.1;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #4b5563;
 	letter-spacing: -0.02em;
-	margin: 0 0 1rem;
+	margin: 0 0 1.2rem;
 }
 
 @media (min-width: 768px) {
@@ -171,7 +150,7 @@
 	}
 
 	.hero-title {
-		font-size: 2.6rem;
+		font-size: 2rem;
 	}
 
 	.hero-copy {
@@ -183,22 +162,52 @@
 	}
 }
 
-.hero-subheadline {
-	margin: 0;
-	color: #4b5563;
+.hero-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 0.9rem;
 }
 
-.encryption-pill {
+.hero-brand-inline {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 0.9rem;
+}
+
+.hero-brand-title {
+	margin: 0;
+	font-size: 2rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+@media (max-width: 900px) {
+	.hero-brand-title {
+		font-size: 1.72rem;
+	}
+
+	/* Override base section heading size for this hero line */
+	.hero-copy .hero-title {
+		font-size: 1.42rem;
+	}
+}
+
+.hero-badge-pill {
 	display: inline-flex;
 	align-items: center;
-	border: 1px solid #9ece9a;
-	color: #5d9f62;
-	background: transparent;
+	justify-content: center;
+	border: 1px solid #d4d8dd;
+	background: #ffffff;
+	color: #4b5563;
 	border-radius: 999px;
-	padding: 0.32rem 0.75rem;
-	font-size: 0.78rem;
-	line-height: 1;
-	margin-top: 0.9rem;
+	padding: 0.45rem 0.72rem;
+	font-size: 0.74rem;
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+	white-space: nowrap;
 }
 
 .hero-ctas {
@@ -217,7 +226,7 @@
 
 .download-tabs-card {
 	margin-top: 1.5rem;
-	max-width: 540px;
+	max-width: 450px;
 }
 
 .download-tabs {
@@ -254,7 +263,7 @@
 	border-top: none;
 	border-bottom-left-radius: 1rem;
 	border-bottom-right-radius: 1rem;
-	padding: 1rem;
+	padding: 1.35rem;
 	display: flex;
 	gap: 1rem;
 	align-items: center;
@@ -298,14 +307,15 @@
 	display: block;
 }
 
-.download-copy h3 {
+.download-cta-copy {
 	margin: 0;
-	font-size: 1.45rem;
-}
-
-.download-copy p {
-	margin: 0.45rem 0 0;
-	font-size: 0.9rem;
+	font-size: 1.65rem;
+	line-height: 1.1;
+	color: #83919f;
+	font-family:
+		'Segoe Script', 'Bradley Hand', 'Lucida Handwriting', 'Comic Sans MS',
+		cursive;
+	font-weight: 600;
 }
 
 .download-copy {
@@ -315,23 +325,108 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	gap: 0.55rem;
 }
 
-.download-copy a {
-	color: #4f78b6;
-	text-decoration: underline;
-	text-underline-offset: 2px;
+.download-middle-arrow {
+	flex: 0 0 44px;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.download-copy a:hover {
-	color: #41679e;
+.download-middle-arrow-icon {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+	transform: scaleX(-1) rotate(135deg);
+}
+
+.mobile-download-block {
+	display: none;
 }
 
 @media (max-width: 560px) {
+	.hero-brand-title {
+		font-size: 1.42rem;
+	}
+
+	/* Override base section heading size for this hero line on phones */
+	.hero-copy .hero-title {
+		font-size: 1.2rem;
+	}
+
+	.hero-brand-inline {
+		justify-content: center;
+	}
+
+	.hero-title {
+		text-align: center;
+	}
+
+	.hero-badges {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	.hero-badge-pill {
+		padding: 0.45rem 0.72rem;
+		font-size: 0.74rem;
+		letter-spacing: 0.02em;
+	}
+
 	.download-card-body {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.download-middle-arrow {
+		transform: rotate(-90deg);
+	}
+
+	.mobile-download-block {
+		margin-top: 1.4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.7rem;
+	}
+
+	.mobile-download-qr-link {
+		display: block;
+		width: 156px;
+		height: 156px;
+	}
+
+	.mobile-download-qr-link:focus-visible {
+		outline: 2px solid #223858;
+		outline-offset: 2px;
+		border-radius: 0.75rem;
+	}
+
+	.mobile-download-qr-image {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.mobile-download-qr-image svg,
+	.mobile-download-qr-image canvas {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	.mobile-download-copy {
+		font-size: 1.45rem;
+		text-align: center;
 	}
 }
 
