@@ -269,6 +269,43 @@ export function LandingPage() {
 					</div>
 				</Section>
 
+				<Section id='benefits'>
+					<div className='section-header'>
+						<h2>Why people use Savelon</h2>
+					</div>
+					<div className='benefits-grid'>
+						<article className='benefit-card'>
+							<div className='benefit-head'>
+								<h3>👀 Take back control from Big Tech</h3>
+							</div>
+							<p>
+								Your contacts shouldn’t end up in surveillance systems you don’t
+								really control. Savelon keeps them on your device, not in the
+								cloud.
+							</p>
+						</article>
+						<article className='benefit-card'>
+							<div className='benefit-head'>
+								<h3>🤐 Protect what’s truly confidential</h3>
+							</div>
+							<p>
+								Some contacts are sensitive by nature. Savelon encrypts them on
+								your device and lets you lock them with a password.
+							</p>
+						</article>
+						<article className='benefit-card'>
+							<div className='benefit-head'>
+								<h3>🤙 Have a second private phonebook</h3>
+							</div>
+							<p>
+								Not every contact belongs in your main list. Savelon gives you a
+								separate space for important or rarely used contacts, kept out
+								of sync and away from other apps.
+							</p>
+						</article>
+					</div>
+				</Section>
+
 				<Section id='privacy-design'>
 					<div className='privacy-design-content'>
 						<h2>Privacy, by design</h2>
@@ -327,43 +364,6 @@ export function LandingPage() {
 							<div className='pill'>Password-protected backups</div>
 							<div className='pill'>Call directly from the app</div>
 						</div>
-					</div>
-				</Section>
-
-				<Section id='benefits'>
-					<div className='section-header'>
-						<h2>Why people use Savelon</h2>
-					</div>
-					<div className='benefits-grid'>
-						<article className='benefit-card'>
-							<div className='benefit-head'>
-								<h3>👀 Take back control from Big Tech</h3>
-							</div>
-							<p>
-								Your contacts shouldn’t end up in surveillance systems you don’t
-								really control. Savelon keeps them on your device, not in the
-								cloud.
-							</p>
-						</article>
-						<article className='benefit-card'>
-							<div className='benefit-head'>
-								<h3>🤐 Protect what’s truly confidential</h3>
-							</div>
-							<p>
-								Some contacts are sensitive by nature. Savelon encrypts them on
-								your device and lets you lock them with a password.
-							</p>
-						</article>
-						<article className='benefit-card'>
-							<div className='benefit-head'>
-								<h3>🤙 Have a second private phonebook</h3>
-							</div>
-							<p>
-								Not every contact belongs in your main list. Savelon gives you a
-								separate space for important or rarely used contacts, kept out
-								of sync and away from other apps.
-							</p>
-						</article>
 					</div>
 				</Section>
 
