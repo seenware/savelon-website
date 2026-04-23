@@ -6,6 +6,17 @@
 	color: #0f172a;
 }
 
+.ph-badge {
+	display: inline-flex;
+	margin-bottom: 0.9rem;
+}
+
+.ph-badge-image {
+	display: block;
+	width: 250px;
+	height: 54px;
+}
+
 .site-brand-logo {
 	width: 44px;
 	height: 44px;
@@ -349,6 +360,17 @@
 }
 
 @media (max-width: 560px) {
+	.ph-badge {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.ph-badge-image {
+		width: 220px;
+		height: auto;
+	}
+
 	.hero-brand-title {
 		font-size: 1.42rem;
 	}
