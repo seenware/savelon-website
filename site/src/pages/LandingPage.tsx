@@ -162,20 +162,6 @@ export function LandingPage() {
 				<Section id='hero' className='hero-section'>
 					<div className='hero-inner'>
 						<div className='hero-copy'>
-							<a
-								className='ph-badge'
-								href='https://www.producthunt.com/products/savelon?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-savelon'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								<img
-									alt='Savelon - Open source, privacy-first contacts app | Product Hunt'
-									width='250'
-									height='54'
-									src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1130583&theme=dark'
-									className='ph-badge-image'
-								/>
-							</a>
 							<div className='hero-badges' aria-label='Key privacy features'>
 								<div className='hero-badge-pill'>OPEN SOURCE</div>
 								<div className='hero-badge-pill'>256 BIT ENCRYPTION</div>
