@@ -127,205 +127,41 @@ function layout(title, description, canonicalPath, assetPaths, bodyContent) {
 const privacyArticle = `
 <article class="legal-page">
   <h1>Privacy Policy for Savelon: Private Contacts</h1>
-  <p>Last updated: March 11, 2026</p>
+  <p>Last updated: August 16, 2026</p>
+
   <p>
-    This Privacy Policy explains how Savelon: Private Contacts ("the App", "we",
-    "us", or "our") handles information when you use it.
+    We do not collect any data. Savelon has no analytics, no tracking, no advertising, and
+    no accounts or sign-in.
   </p>
 
-  <h2>1) Summary</h2>
+  <h2>Everything stays on your device</h2>
   <p>
-    The App is designed to work primarily offline. We do not transmit your contacts or
-    encrypted contact data off your device.
-  </p>
-  <p>The only situations where information may leave your device are:</p>
-  <ul>
-    <li>
-      If you choose to send us a message through the optional in-app support form.
-    </li>
-    <li>
-      If you make or restore an in-app purchase, which is processed through the platform
-      app store and RevenueCat to manage purchase status and entitlements.
-    </li>
-  </ul>
-
-  <h2>2) Information the App does not collect during normal contact use</h2>
-  <p>
-    We do not collect, transmit, sell, or share the following from the App as part of
-    normal contact storage and use:
-  </p>
-  <ul>
-    <li>Your contacts list or contact details stored in the App.</li>
-    <li>
-      Names, phone numbers, email addresses, postal addresses, notes, or other contact
-      fields you save in the App.
-    </li>
-    <li>Encryption keys, passwords, recovery phrases, or encrypted contact contents.</li>
-    <li>Location data.</li>
-    <li>Advertising identifiers for ad targeting.</li>
-    <li>Analytics about your contacts or their contents.</li>
-  </ul>
-
-  <h2>3) Optional support messages</h2>
-  <p>The App includes an optional support feature that allows you to contact us.</p>
-  <p>
-    If you submit a support request, we may collect the information you voluntarily
-    provide, such as:
-  </p>
-  <ul>
-    <li>Message content.</li>
-    <li>Email address, if you want a reply.</li>
-    <li>Any other information you choose to include in your message.</li>
-  </ul>
-  <p>We use this information only to respond to your request and provide support.</p>
-
-  <h2>4) Support form provider (Tally)</h2>
-  <p>
-    Support requests submitted through the App are collected using Tally:
-    <a href="https://tally.so" target="_blank" rel="noreferrer">https://tally.so</a>.
-  </p>
-  <p>
-    When you submit the support form, the data you enter is sent to and stored by Tally,
-    then accessed by us for support purposes.
-  </p>
-  <p>
-    Tally acts as a service provider that helps us receive and manage support
-    submissions. Tally's handling of your data is governed by its own terms and
-    privacy practices.
+    All information you create in the app, including contacts, notes, tags, and settings,
+    is stored locally on your device. This data never leaves your device and is never sent
+    to us or any third party.
   </p>
 
-  <h2>5) In-app purchases and RevenueCat</h2>
+  <h2>If you contact us</h2>
   <p>
-    The App offers optional in-app purchases. Purchases are processed by the relevant app
-    store, such as Apple App Store or Google Play, and purchase status is managed through
-    RevenueCat:
-    <a href="https://www.revenuecat.com" target="_blank" rel="noreferrer">https://www.revenuecat.com</a>.
-  </p>
-  <p>
-    When you make, restore, or check an in-app purchase, certain purchase-related and
-    technical information may be processed by RevenueCat and the app store, such as:
-  </p>
-  <ul>
-    <li>Subscription or purchase status.</li>
-    <li>Transaction and receipt information.</li>
-    <li>Anonymous or app-scoped identifiers used to manage entitlements.</li>
-    <li>
-      Device, app, and technical information necessary to validate purchases and prevent
-      fraud.
-    </li>
-  </ul>
-  <p>
-    We do not use RevenueCat to access your contacts, encrypted contact data, or
-    passwords. We do not require you to create an account in the App to make purchases.
-  </p>
-  <p>
-    RevenueCat and the app store providers process purchase-related information according
-    to their own privacy policies:
-  </p>
-  <ul>
-    <li>RevenueCat: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noreferrer">https://www.revenuecat.com/privacy</a></li>
-    <li>Apple: <a href="https://www.apple.com/legal/privacy" target="_blank" rel="noreferrer">https://www.apple.com/legal/privacy</a></li>
-    <li>Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">https://policies.google.com/privacy</a></li>
-  </ul>
-
-  <h2>6) Legal bases (EEA/UK users)</h2>
-  <p>
-    If you are located in the European Economic Area or the UK, we process personal data
-    only where we have a valid legal basis.
-  </p>
-  <p>For support submissions, our legal bases are:</p>
-  <ul>
-    <li>Consent, when you choose to submit the support form and optionally provide your email address.</li>
-    <li>Legitimate interests, namely responding to inquiries and maintaining the App.</li>
-  </ul>
-  <p>For in-app purchases and purchase restoration, our legal bases are:</p>
-  <ul>
-    <li>Performance of a contract, to provide purchased features or subscriptions.</li>
-    <li>Legitimate interests, namely fraud prevention, purchase validation, and maintaining access to paid features.</li>
-    <li>Legal obligations, where applicable for financial, tax, accounting, or consumer law compliance.</li>
-  </ul>
-
-  <h2>7) Data retention</h2>
-  <p>
-    We retain support submissions only as long as reasonably necessary to respond to you
-    and resolve the issue and maintain records of support interactions for quality and
-    continuity.
-  </p>
-  <p>We do not store your contacts or encrypted contact database on our servers.</p>
-  <p>
-    Purchase records may be retained by RevenueCat, Apple, Google, or other
-    payment-related providers for entitlement management, fraud prevention, accounting,
-    legal, or operational purposes, according to their own retention practices.
-  </p>
-  <p>
-    If you want us to delete a support submission you sent to us, contact us using the
-    details in Section 12.
+    The app does not include a support form. If you choose to write to us through the
+    contact form on this website, we receive what you send, such as your message and your
+    email address if you provide one. That form is hosted by Tally
+    (<a href="https://tally.so" target="_blank" rel="noreferrer">https://tally.so</a>), and
+    we use what you send only to answer you.
   </p>
 
-  <h2>8) Sharing of information</h2>
-  <p>We do not sell your personal information.</p>
-  <p>We share information only as needed for the following purposes:</p>
-  <ul>
-    <li>Tally, to receive and store support form submissions.</li>
-    <li>RevenueCat, to manage purchase validation and entitlements.</li>
-    <li>Apple, Google, or other platform payment providers, to process in-app purchases.</li>
-    <li>Other service providers only if necessary to operate support workflows or comply with legal obligations.</li>
-  </ul>
-
-  <h2>9) International transfers</h2>
+  <h2>Children's privacy</h2>
   <p>
-    Because our service providers, including Tally, RevenueCat, and app store providers,
-    may process data on servers located in different countries, your information may be
-    transferred to and processed outside your country of residence.
-  </p>
-  <p>
-    Where applicable, we rely on reasonable safeguards provided by those service providers
-    for cross-border data transfers.
+    Because the app collects no data from anyone, it collects no data from children.
   </p>
 
-  <h2>10) Children's privacy</h2>
-  <p>
-    The App is not directed to children under 13, or under the age defined by local law.
-    We do not knowingly collect personal information from children through the App except
-    where a child voluntarily submits a support message or a purchase is processed by the
-    platform provider.
-  </p>
-  <p>
-    If you believe a child has provided personal data through the support form, contact us
-    and we will take reasonable steps to delete it where possible.
-  </p>
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted on this page.</p>
 
-  <h2>11) Your rights and choices</h2>
-  <p>Depending on your location, you may have rights to:</p>
-  <ul>
-    <li>Request access to personal data concerning you.</li>
-    <li>Request correction or deletion.</li>
-    <li>Object to or restrict certain processing.</li>
-    <li>Withdraw consent where processing is based on consent.</li>
-    <li>Lodge a complaint with a data protection authority.</li>
-  </ul>
+  <h2>Contact</h2>
   <p>
-    Because we generally do not collect personal data during normal use of the App, these
-    rights mainly apply to information voluntarily submitted through the support form or
-    purchase-related data processed by our service providers.
-  </p>
-  <p>
-    For purchase-related requests, you may also need to contact the relevant provider
-    directly, such as RevenueCat, Apple, or Google.
-  </p>
-
-  <h2>12) Contact</h2>
-  <p>
-    If you have questions or requests about this Privacy Policy or your support submission
-    data, contact us at:
+    If you have any questions about this privacy policy, contact us here:
     <a href="https://tally.so/r/jaZKA6" target="_blank" rel="noreferrer">https://tally.so/r/jaZKA6</a>.
-  </p>
-
-  <h2>13) Changes to this Privacy Policy</h2>
-  <p>
-    We may update this Privacy Policy from time to time. If we make changes, we will
-    update the "Last updated" date above. Continued use of the App after an
-    update means you accept the updated policy.
   </p>
 </article>
 `;
@@ -333,7 +169,7 @@ const privacyArticle = `
 const termsArticle = `
 <article class="legal-page">
   <h1>TERMS OF USE FOR SAVELON: PRIVATE CONTACTS</h1>
-  <p>Last updated: March 20, 2026</p>
+  <p>Last updated: August 16, 2026</p>
 
   <p>
     These Terms of Use ("Terms") govern your use of the Savelon: Private Contacts application.
@@ -345,7 +181,7 @@ const termsArticle = `
 
   <h2>Provider Information</h2>
   <p>
-    Support form:
+    Contact form:
     <a href="https://tally.so/r/jaZKA6" target="_blank" rel="noreferrer">https://tally.so/r/jaZKA6</a>
   </p>
   <p>
@@ -355,7 +191,7 @@ const termsArticle = `
 
   <h2>1. The App</h2>
   <p>
-    Savelon: Private Contacts ("App") is a contact-management application designed to help users store and manage contact information with a focus on privacy and local device storage. Depending on the version and features you use, the App may operate primarily offline and may offer paid features and subscriptions.
+    Savelon: Private Contacts ("App") is a contact-management application designed to help users store and manage contact information with a focus on privacy and local device storage. The App operates on your device and stores your data locally.
   </p>
 
   <h2>2. Eligibility and Acceptable Use</h2>
@@ -364,7 +200,7 @@ const termsArticle = `
   </p>
   <p>(a) use the App for unlawful, fraudulent, abusive, or harmful purposes;</p>
   <p>(b) interfere with or disrupt the App or related systems;</p>
-  <p>(c) attempt to bypass security, access controls, or purchase restrictions;</p>
+  <p>(c) attempt to bypass security or access controls;</p>
   <p>(d) copy, modify, reverse engineer, decompile, disassemble, or create derivative works from the App, except to the extent such restriction is prohibited by mandatory law;</p>
   <p>(e) resell, sublicense, rent, lease, or commercially exploit the App except as expressly authorized by us.</p>
 
@@ -410,28 +246,15 @@ const termsArticle = `
     <a href="https://savelon.com/privacy" target="_blank" rel="noreferrer">https://savelon.com/privacy</a>
   </p>
   <p>
-    By using the App, you acknowledge that certain technical and operational data may be processed as described in the Privacy Policy. You are responsible for reviewing the Privacy Policy before using the App.
+    By using the App, you acknowledge that information is handled only as described in the Privacy Policy. You are responsible for reviewing the Privacy Policy before using the App.
   </p>
 
-  <h2>7. Purchases, Subscriptions, and Billing</h2>
+  <h2>7. Third-Party Services and Platforms</h2>
   <p>
-    The App may offer paid subscriptions, non-consumable purchases, one-time purchases, or other paid features. If you purchase a subscription or other digital product through Apple App Store, Google Play, or another third-party marketplace, billing, payment processing, renewals, cancellations, refund handling, taxes, and related payment administration are handled by the applicable platform and are subject to that platform's terms and policies.
-  </p>
-  <p>If you purchase an automatically renewing subscription:</p>
-  <p>(a) your subscription renews automatically unless canceled before the end of the current billing period in accordance with the platform's rules;</p>
-  <p>(b) you must manage or cancel the subscription through your Apple ID, Google Play account, or other applicable platform account;</p>
-  <p>(c) we do not receive or store your full payment card details;</p>
-  <p>(d) access to paid features may be suspended, limited, or terminated if your payment fails, your subscription expires, your purchase is reversed, refunded, revoked, or canceled, or if the platform reports that no valid entitlement exists.</p>
-  <p>
-    Prices, available plans, feature sets, trial offers, introductory pricing, and availability may vary by country, platform, device, campaign, or time and may change as permitted by applicable law and platform rules.
+    The App may rely on, integrate with, or link to third-party platforms, tools, SDKs, APIs, hosting providers, or external websites, including without limitation app marketplaces and service providers such as Apple, Google, Tally, hosting providers, and other third parties. Your use of third-party services may be subject to separate third-party terms, privacy policies, and technical limitations. We are not responsible for third-party products or services that we do not control, including their availability, security, legality, content, performance, or data practices.
   </p>
 
-  <h2>8. Third-Party Services and Platforms</h2>
-  <p>
-    The App may rely on, integrate with, or link to third-party platforms, tools, SDKs, APIs, hosting providers, analytics tools, support tools, payment processors, or external websites, including without limitation app marketplaces and service providers such as Apple, Google, RevenueCat, Tally, hosting providers, and other third parties. Your use of third-party services may be subject to separate third-party terms, privacy policies, and technical limitations. We are not responsible for third-party products or services that we do not control, including their availability, security, legality, content, performance, or data practices.
-  </p>
-
-  <h2>9. Updates, Changes, and Availability</h2>
+  <h2>8. Updates, Changes, and Availability</h2>
   <p>
     We may release updates, patches, bug fixes, security improvements, compatibility changes, feature changes, or new versions of the App. Certain features may require you to install updates to continue functioning properly. We may modify, suspend, discontinue, remove, or restrict access to any part of the App at any time, temporarily or permanently, for technical, legal, security, operational, or business reasons.
   </p>
@@ -439,17 +262,17 @@ const termsArticle = `
     Nothing in these Terms limits any mandatory rights you may have under applicable consumer law in relation to required updates or the legal conformity of digital products.
   </p>
 
-  <h2>10. Intellectual Property</h2>
+  <h2>9. Intellectual Property</h2>
   <p>
     The App, including its software, design, text, graphics, logos, trademarks, databases, and other content, is owned by us or our licensors and is protected by intellectual property laws. Except for the limited license expressly granted under these Terms, no rights, title, or interest in the App or related intellectual property are transferred to you.
   </p>
 
-  <h2>11. Feedback</h2>
+  <h2>10. Feedback</h2>
   <p>
     If you provide suggestions, ideas, improvements, bug reports, feature requests, or other feedback, you grant us a worldwide, non-exclusive, royalty-free, perpetual, irrevocable, transferable, sublicensable right to use, reproduce, modify, adapt, publish, implement, and otherwise exploit that feedback without restriction or compensation, unless prohibited by mandatory law.
   </p>
 
-  <h2>12. Suspension and Termination</h2>
+  <h2>11. Suspension and Termination</h2>
   <p>
     These Terms apply from the first time you access or use the App and continue until terminated. We may suspend or terminate your right to use the App, in whole or in part, with immediate effect if:
   </p>
@@ -460,7 +283,7 @@ const termsArticle = `
     You may stop using the App at any time by uninstalling it and discontinuing use. Upon termination, the license granted to you ends immediately. Sections that by their nature should survive termination will survive, including provisions on intellectual property, liability, disclaimers, dispute resolution, and general provisions.
   </p>
 
-  <h2>13. Disclaimer of Warranties</h2>
+  <h2>12. Disclaimer of Warranties</h2>
   <p>
     To the maximum extent permitted by applicable law, the App and related services are provided "as is" and "as available." We do not warrant that the App will be uninterrupted, error-free, secure, always available, compatible with every device, free from defects, or suitable for your specific needs. We do not warrant that User Data will never be lost, corrupted, delayed, inaccessible, or unrecoverable. You acknowledge that software, local storage, encryption systems, mobile operating systems, third-party platforms, device hardware, and network services can fail or behave unpredictably.
   </p>
@@ -468,7 +291,7 @@ const termsArticle = `
     Nothing in these Terms excludes any non-waivable statutory rights or mandatory warranties that cannot lawfully be excluded or limited.
   </p>
 
-  <h2>14. Limitation of Liability</h2>
+  <h2>13. Limitation of Liability</h2>
   <p>
     To the maximum extent permitted by applicable law, we shall be liable for damages only in accordance with this Section. We are liable without limitation for:
   </p>
@@ -491,7 +314,7 @@ const termsArticle = `
     Any limitation of liability also applies in favor of our legal representatives, employees, contractors, and agents.
   </p>
 
-  <h2>15. Indemnification</h2>
+  <h2>14. Indemnification</h2>
   <p>
     To the extent permitted by applicable law, you agree to indemnify and hold us harmless from third-party claims, damages, losses, liabilities, costs, and expenses arising out of or related to:
   </p>
@@ -503,32 +326,32 @@ const termsArticle = `
     This section does not apply to consumers to the extent prohibited by mandatory law.
   </p>
 
-  <h2>16. Consumer Rights</h2>
+  <h2>15. Consumer Rights</h2>
   <p>
     If you are a consumer, you may have mandatory rights under the laws of your country of residence, including within the European Union. Nothing in these Terms excludes, restricts, or limits any consumer rights that cannot lawfully be excluded or limited.
   </p>
 
-  <h2>17. Export and Sanctions Compliance</h2>
+  <h2>16. Export and Sanctions Compliance</h2>
   <p>
     You may not use, export, or re-export the App except as authorized by applicable export control and sanctions laws. You represent that you are not located in, under the control of, or a resident of any country or person subject to applicable trade restrictions that would prohibit your lawful use of the App.
   </p>
 
-  <h2>18. Governing Law and Dispute Resolution</h2>
+  <h2>17. Governing Law and Dispute Resolution</h2>
   <p>
     If you are a consumer residing in the European Union, these Terms are governed by German law, excluding conflict-of-law rules, provided that you also retain the protection of mandatory provisions of the law of the country in which you have your habitual residence. If you are not a consumer, these Terms are governed by German law, excluding conflict-of-law rules and excluding the UN Convention on Contracts for the International Sale of Goods (CISG), and the courts of Munich, Germany shall have exclusive jurisdiction, to the extent legally permitted. We are not obligated and do not agree to participate in dispute resolution proceedings before a consumer arbitration board unless required by law.
   </p>
 
-  <h2>19. Changes to These Terms</h2>
+  <h2>18. Changes to These Terms</h2>
   <p>
     We may update these Terms from time to time for legal, technical, operational, or business reasons. The current version will be made available through the App, the app listing, or our website. Your continued use of the App after updated Terms become effective constitutes acceptance of the updated Terms, unless applicable law requires a different form of consent.
   </p>
 
-  <h2>20. App Marketplace Terms</h2>
+  <h2>19. App Marketplace Terms</h2>
   <p>
     If you downloaded the App from Apple App Store, Google Play, or another marketplace, you acknowledge that the relevant marketplace operator is not a party to these Terms and is not responsible for the App except as required by applicable law or platform rules. You also acknowledge that your use of the App must comply with the applicable marketplace terms and device usage rules.
   </p>
 
-  <h2>21. Severability and General Provisions</h2>
+  <h2>20. Severability and General Provisions</h2>
   <p>
     If any provision of these Terms is held invalid, illegal, or unenforceable, the remaining provisions remain in effect to the fullest extent permitted by law. Our failure to enforce any provision is not a waiver of that provision. These Terms constitute the entire agreement between you and us regarding the App, except where separate terms expressly apply to a specific feature or service.
   </p>
